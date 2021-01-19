@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    input[type=text],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+
+    input[type=email],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+
+    input[type=number],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+
+
+    input[type=submit] {
+      background-color: #52509c;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+      background-color: #4ba09c;
+    }
+
+    .title {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      padding: 24px 15px 24px 15px;
+    }
+
+    .title-1 {
+      font-family: Poppins-Bold;
+      font-size: 35px;
+      color: #fff;
+      line-height: 1.2;
+      text-align: center;
+      padding-bottom: 7px;
+    }
+
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+      width: 30%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <form class="form" onsubmit="return validate();">
+      <div class="title" style="background-image: url(images.jpeg);">
+        <span class="title-1">
+          Contact Us
+        </span>
+      </div>
+      <br>
+      <input type="text" id="fname" name="name" placeholder="Full name.." required>
+      <input type="email" id="email" name="email" placeholder="Eg.example@gmail.com" required>
+      <input type="number" id="mno" name="mno" placeholder="Eg.8200827094" required>
+      <textarea id="comments" name="comments" placeholder="Your comments.." style="height:200px" required></textarea>
+      <center><input type="submit" value="Send Now"></center>
+    </form>
+  </div>
+</body>
+<script>
+
+  function validate() {
+    alert("Your request has been submitted !");
+  }
+</script>
+
+</html>

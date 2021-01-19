@@ -1,0 +1,29 @@
+.input {
+    margin-left: 120px;
+}
+
+.input-1 {
+    margin-left: 25px;
+}
+
+.input-2 {
+    margin-left: 25px;
+    width: 130px;
+    height: 70px;
+    resize: none;
+}
+
+.input-3 {
+    margin-left: 25px;
+    height: 70px;
+    width: 80px;
+    resize: none;
+}
+
+input[type="submit"] {
+    margin-top: 10px;
+}
+
+input[type="reset"] {
+    margin-top: 10px;
+}
