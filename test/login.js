@@ -1,11 +1,16 @@
 var array = [];
 
+function registerfun() {
+    window.location.href = "Registration.html";
+
+}
+
 function checkuser() {
     var email = document.getElementById('uid').value;
     var pwd = document.getElementById('pwd').value;
 
-    if (sessionStorage.getItem('array')) {
-        array = JSON.parse(sessionStorage.getItem('array'));
+    if (localStorage.getItem('array')) {
+        array = JSON.parse(localStorage.getItem('array'));
     }
 
     function check_user_register() {
@@ -16,6 +21,8 @@ function checkuser() {
             if (temp.admin_email == email && temp.admin_pwd == pwd) {
                 hasMatch = true;
                 alert("login successfull");
+                window.location.href = "Dashboard.html";
+
                 break;
             }
         }
