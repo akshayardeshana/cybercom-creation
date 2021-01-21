@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title>Register page</title>
+
+    <script src="script.js">
+    </script>
+
+</head>
+<link rel="stylesheet" href="style.css" />
+
+<body>
+    <form>
+        <div class="box">
+            <h3>
+                <center>Welcome to register screen</center>
+            </h3>
+            <div class="align">
+                <input type="text" class="input" id="name" name="name" placeholder="Name" required></input>
+            </div>
+
+            <div class="align">
+                <input type="email" class="input" id="email" name="email" placeholder="Email" required></input>
+            </div>
+
+            <div class="align">
+                <input type="password" class="input" id="pwd" name="pwd" placeholder="password" required></input>
+            </div>
+
+            <div class="align">
+                <input type="password" class="input" id="cpwd" name="cpwd" placeholder="confirm password" required></input>
+            </div>
+            <div class="align">
+                <label for="city">Select city:</label>
+                <select name="city" id="city">
+                <option value="rajkot">rajkot</option>
+                <option value="junagadh">junagadh</option>
+                <option value="ahmedabad">ahmedabad</option>
+
+            </select>
+            </div>
+            <div class="align">
+                <label for="state">Select state:</label>
+                <select name="state" id="state">
+                <option value="Gujarat">Gujarat</option>
+                <option value="Punjab">Punjab</option>
+              
+            </select>
+            </div>
+            <input type="button" class="btn" name="login" value="login" onclick="register();" />
+            <div id="Result"></div>
+
+        </div>
+    </form>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+    $('#pwd, #cpwd').on('keyup', function() {
+        if ($('#pwd').val() == $('#cpwd').val()) {
+            $('#message').html('Matching').css('color', 'green');
+        } else
+            $('#message').html('Not Matching').css('color', 'red');
+    });
+</script>
+
+</html>
