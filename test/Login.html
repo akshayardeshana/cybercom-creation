@@ -3,13 +3,14 @@
 <head>
     <title>Login</title>
 
-    <script src="script.js">
+    <script src="login.js">
     </script>
 </head>
+
 <link rel="stylesheet" href="style.css" />
 
 <body>
-    <form action="Regitstration.html">
+    <form>
         <div class="box">
             <h3>
                 <center>Welcome to login screen</center>
@@ -26,7 +27,7 @@
 
             </div>
 
-            <input type="button" class="btn" name="login" value="login" onclick="login();" />
+            <input type="button" id="submit" class="btn" name="login" value="login" onclick="checkuser();" />
 
             <input type="submit" class="btn" name="register" value="register" />
             <div id="Result"></div>

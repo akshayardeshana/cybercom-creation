@@ -18,8 +18,8 @@ function register() {
         admin_state: state
     };
 
-    if (sessionStorage.getItem('array')) {
-        array = JSON.parse(sessionStorage.getItem('array'));
+    if (localStorage.getItem('array')) {
+        array = JSON.parse(localStorage.getItem('array'));
     }
 
     function check_user_register() {
@@ -27,21 +27,22 @@ function register() {
 
             var temp = array[index];
 
-            if (temp.admin_name == name) {
+            if (temp.admin_email == email) {
                 hasMatch = true;
                 alert("admin already exist with same email");
                 break;
             }
         }
     }
-
+    check_user_register();
     if (hasMatch === false) {
-
         array.push(admin);
         console.log(array);
-        sessionStorage.setItem("array", JSON.stringify(array));
-        alert(name + " " + email + " added at index " + array.length);
-
+        localStorage.setItem("array", JSON.stringify(array));
+        var ask = window.confirm("You are registerd successfully");
+        if (ask) {
+            window.location.href = "Login.html";
+        }
     }
 
 
