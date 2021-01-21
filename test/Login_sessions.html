@@ -14,6 +14,10 @@
             background-color: #333;
         }
         
+        .topnav-right {
+            float: right;
+        }
+        
         .topnav a {
             float: left;
             color: #f2f2f2;
@@ -33,6 +37,10 @@
             color: white;
         }
     </style>
+
+    <script src="loginsession.js">
+    </script>
+
 </head>
 
 <body>
@@ -41,7 +49,11 @@
         <a href="Dashboard.html">Dashboard</a>
         <a href="Users.html">Users</a>
         <a class="active" href="Login_sessions.html">Login Sessions</a>
-        <a href="">Logout</a>
+        <a onclick="logout();">Logout</a>
+        <div class="topnav-right">
+            <a id="uname">hello </a>
+        </div>
+
     </div>
 
     <div style="padding-left:16px">
@@ -50,5 +62,8 @@
     </div>
 
 </body>
+<script>
+    document.getElementById("uname").innerHTML = "Hello " + sessionStorage.getItem("name");
+</script>
 
 </html>

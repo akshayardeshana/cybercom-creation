@@ -21,6 +21,8 @@ function checkuser() {
             if (temp.admin_email == email && temp.admin_pwd == pwd) {
                 hasMatch = true;
                 alert("login successfull");
+                sessionStorage.setItem("name", temp.admin_name);
+
                 window.location.href = "Dashboard.html";
 
                 break;

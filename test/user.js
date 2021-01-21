@@ -1,6 +1,27 @@
 var array_user = [];
 var hasMatch = false;
 
+function logout() {
+    sessionStorage.clear();
+    window.location.href = "Login.html";
+
+}
+
+function getAge(dateString) {
+    var today = new Date();
+    var birthDate = new Date(dateString);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    return age;
+}
+
+function Delete() {
+
+}
+
 function adduser() {
     var name = document.getElementById('name').value;
     var email = document.getElementById('email').value;
