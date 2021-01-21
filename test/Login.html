@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Login</title>
+
+    <script src="login.js">
+    </script>
+</head>
+
+<link rel="stylesheet" href="style.css" />
+
+<body>
+    <form>
+        <div class="box">
+            <h3>
+                <center>Welcome to login screen</center>
+            </h3>
+            <div class="align">
+
+                <label>Login id :</label>
+                <input type="text" class="input" id="uid" name="uid"></input>
+            </div>
+
+            <div class="align">
+                <label>Password:</label>
+                <input type="password" class="input" id="pwd" name="pwd"></input>
+
+            </div>
+
+            <input type="button" id="submit" class="btn" name="login" value="login" onclick="checkuser();" />
+
+            <input type="submit" class="btn" name="register" value="register" />
+            <div id="Result"></div>
+
+        </div>
+    </form>
+</body>
+
+</html>
