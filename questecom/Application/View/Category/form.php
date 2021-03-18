@@ -1,0 +1,5 @@
+<?php
+
+$tabs = $this->getTabContent();
+
+?>
